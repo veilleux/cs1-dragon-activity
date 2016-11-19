@@ -13,6 +13,8 @@ def main():
         loot = friendly(loot)
     elif(cavenumber == 2):
         loot= dangerouscave(loot)
+    elif(cavenumber == 2):
+        loot= waterlesscave(loot)
     elif(cavenumber == -1):
         print("What! Quiting? No guts! No glory!")
     else:
@@ -52,6 +54,25 @@ def dangerouscave(loot):
         print("Total Treasure ="+str(loot))
     return(loot)
  
+def waterlesscave(loot):
+    #cave 3 
+    hoursTrapped = random.randint(1, 4)
+    print("You enter the cave...")
+    time.sleep(1)
+    print("You find that you are trapped for " + str(hoursTrapped) + " hours")
+    time.sleep(1)
+    print("and there's no water...")
+    time.sleep(2)
+
+    print("You can buy water for 10 gold coins, enough for an hour")
+    taken = 10*hoursTrapped
+    loot=(loot-taken)
+    if(loot<=0):
+        print("You die of thirst!!!")
+    else:
+        print("This takes "+str(taken)+" of gold coins from your treasure!!!")
+        print("Total Treasure ="+str(loot))
+    return(loot)
 
 def introduction():
     print("Welcome: To DO write instructions")
@@ -65,7 +86,7 @@ def choosecave():
     return cave
 
 def randomcave():
-    cavenumber = random.randint(1, 2)
+    cavenumber = random.randint(1, 3)
     return cavenumber
 
 
