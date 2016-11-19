@@ -1,0 +1,77 @@
+support files: stromy's triangle of master cloud/ your cloud/ your local
+support files: they need to have installed their own git thing (gitbash, git shell)
+
+Learning objectives: 
+-- motivates the need for functions
+-- motivates 
+
+Part I: 
+instructor will have needed to 
+(bo will elaborate steps) 
+
+instructor or a student can be maintainer
+
+>> from github
+: maintainer makes a repo
+
+>> local:
+cd to where you want your repo to go
+git clone  <git URL> 
+
+Students: 
+Cloud: fork github instructor's copy on github cloud
+Local: clone their own local copy
+       starting with the forked *.py file, make edits
+
+	   When done, git add .
+	              git commit -m "comment"
+			      git push    #no need to mention URL
+	(note: these last three steps can be repeated more than once for practice) 
+
+Cloud: start a pull request
+
+maintainer: gets pull request ... click on the comments in command line
+if not, approved
+
+Part II: If there are conflicts, resolve the merge conflicts 
+Option 1: the instructor can resolve conflicts
+Option 2: students work in teams to resolve conflicts (can be done individually)
+    git pull
+ 
+    git checkout -b badConflictPerson-master master
+    git pull <bad conflict url> master
+ 
+    git checkout master
+    git merge --no-ff badConflictPerson-master
+    git push origin master
+	
+	
+Note: whenever you are starting a session begin with a git pull <MASTER URL> 
+and whenver you end, finish with git push to your own git cloud	
+	
+	
+
+
+
+
+To get new code (everyone else, not the last committer)
+Local: git pull  #no need to mention URL		  
+
+
+
+
+
+GIT commands to learn
+add *
+commit * 
+push
+pull -- from the git cloud
+clone -- to get the files from maintainer/master
+rebasr 
+status
+log? 
+diff
+
+(ssh keys for authentification) 
+
+
