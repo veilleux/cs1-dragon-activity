@@ -4,6 +4,7 @@ import time
 def main():
     introduction()
     # give the player some starting loot
+    #check change
     loot = 5
     
     cavenumber = choosecave()
